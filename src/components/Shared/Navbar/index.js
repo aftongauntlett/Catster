@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 function myNavbar() {
   return (
@@ -12,12 +9,13 @@ function myNavbar() {
       variant="dark"
       expand="lg"
     >
+      <Navbar.Brand href="/">Catster</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/">About</Nav.Link>
           <Nav.Link href="/discover">Discover Cats</Nav.Link>
-          <Nav.Link href="/search">Search Cats</Nav.Link>
+          <Nav.Link href="/search">Search by Breed</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
