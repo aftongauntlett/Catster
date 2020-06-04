@@ -24,9 +24,9 @@ Catster web-app that allows the user to look at cat pictures and choose if they 
 
 ## Screenshot
 
-![Main](https://i.imgur.com/z96xiC6.png)
+![Main](https://i.imgur.com/pIQ8b4b.jpg)
 ![Discover](https://i.imgur.com/1BZ9W17.png)
-![Search](https://i.imgur.com/URv94hz.png)
+![Search](https://i.imgur.com/1yrr3Kx.jpg)
 
 ## License
 
