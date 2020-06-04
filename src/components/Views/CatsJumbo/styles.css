@@ -1,0 +1,18 @@
+.imageJumbo {
+  background-image: url(./img/catbanner.png);
+  background-size: cover;
+  background-position: bottom;
+  height: 65vh;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: "Lexend Tera", sans-serif;
+  color: black;
+}
+
+.paragraph {
+  font-size: 25px;
+  font-family: "Lexend Tera", sans-serif;
+  color: rgba(32, 32, 32, 0.897);
+}

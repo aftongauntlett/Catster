@@ -1,0 +1,34 @@
+.searchBar {
+  font-family: "Lexend Tera", sans-serif;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 40px;
+}
+
+.searchButton {
+  margin: 20px;
+  font-family: "Lexend Tera", sans-serif;
+}
+
+.breedLabel {
+  font-family: "Lexend Tera", sans-serif;
+  color: rgba(240, 238, 245, 0.719);
+  margin: 20px;
+}
+
+.form-control {
+  background-color: rgb(222, 224, 236);
+  font-family: "Lexend Tera", sans-serif;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.search {
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+}
