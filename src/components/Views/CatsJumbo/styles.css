@@ -16,3 +16,25 @@ h1 {
   font-family: "Lexend Tera", sans-serif;
   color: rgba(32, 32, 32, 0.897);
 }
+
+@media only screen and (max-width: 600px)  {
+  .imageJumbo {
+    background-image: url(./img/catbanner.png);
+    background-size: cover;
+    background-position: right;
+    height: 65vh;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-family: "Lexend Tera", sans-serif;
+    color: black;
+  }
+
+  .paragraph {
+    font-size: 20px;
+    font-family: "Lexend Tera", sans-serif;
+    color: rgba(32, 32, 32, 0.897);
+  }
+  
+}

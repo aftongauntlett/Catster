@@ -5,3 +5,12 @@
   color: rgba(161, 187, 211, 0.726);
 }
 
+@media only screen and (max-width: 600px)  {
+  .homeBlurb {
+    text-align: center;
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 15px;
+    color: rgba(161, 187, 211, 0.726);
+    padding: 15px;
+  }
+}
