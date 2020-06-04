@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./styles.css";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 
@@ -11,6 +10,7 @@ export default class index extends Component {
     search: "",
     breeds: [],
     selectedBreed: {},
+    description: "",
   };
 
   componentDidMount() {
@@ -43,9 +43,10 @@ export default class index extends Component {
   getImage(breed) {
     const url = "https://api.thecatapi.com/v1/images/search?breed_ids=" + breed;
     axios.get(url).then((resp) => {
-      console.log(resp.data);
+      console.log(resp.data[0])
       this.setState({
         imageURL: resp.data[0].url,
+        description: resp.data[0].breeds[0].description,
       });
     });
   }
@@ -92,7 +93,11 @@ export default class index extends Component {
             ></input>
             <datalist id="breeds">{this.breedList()}</datalist>
           </div>
+
+          {/* description */}
+          <p>{this.state.description}</p>
         </Form>
+
       </Card>
     );
   }

@@ -30,6 +30,10 @@ Catster web-app that allows the user to look at cat pictures and choose if they 
 
 ## License
 
+## API Credit
+
+https://thecatapi.com/
+
 MIT License
 
 Copyright(c) [2020][afton gauntlett]

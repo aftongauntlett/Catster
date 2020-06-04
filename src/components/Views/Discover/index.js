@@ -18,7 +18,6 @@ export default class CatList extends Component {
 
   getNewImage() {
     axios("https://api.thecatapi.com/v1/images/search?limit=1").then((resp) => {
-      console.log(resp.data[0].url);
       this.setState({
         imageURL: resp.data[0].url,
       });
