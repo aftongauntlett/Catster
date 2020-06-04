@@ -3,6 +3,7 @@ import "./styles.css";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Card from "react-bootstrap/Card";
 
 export default class index extends Component {
   state = {
@@ -61,13 +62,25 @@ export default class index extends Component {
     }
   };
 
-  render() {
+  image() {
+    if (this.state.imageURL !== "") {
+      return (
+        <Card.Img
+          className="breedImage"
+          variant="top"
+          src={this.state.imageURL}
+        />
+      );
+    }
+  }
+
+  searchBreedCat() {
     return (
-      <div className="d-flex justify-content-center">
-        <img src={this.state.imageURL} />
+      <Card className="catCard">
         <Form className="search" onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label className="breedLabel">Breed Name:</label>
+            {this.image()}
+            <Card.Title>Breed Name:</Card.Title>
             <input
               onChange={this.selectBreed}
               className="searchBar form-control"
@@ -78,11 +91,16 @@ export default class index extends Component {
               id="breed"
             ></input>
             <datalist id="breeds">{this.breedList()}</datalist>
-            <Button className="searchButton" variant="dark" type="submit">
-              Search
-            </Button>
           </div>
         </Form>
+      </Card>
+    );
+  }
+
+  render() {
+    return (
+      <div className="d-flex justify-content-center">
+        {this.searchBreedCat()}
       </div>
     );
   }

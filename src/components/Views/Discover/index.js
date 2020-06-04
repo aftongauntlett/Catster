@@ -44,8 +44,12 @@ export default class CatList extends Component {
     return (
       <Card className="catCard">
         <Card.Title>Admire the cat</Card.Title>
-        <Card.Img variant="top" src={this.state.imageURL} />
         <Card.Body>
+          <Card.Img
+            className="discoverCatImg"
+            variant="top"
+            src={this.state.imageURL}
+          />
           <Card.Text>Do you love this cat?</Card.Text>
 
           <Button

@@ -32,3 +32,21 @@
   justify-content: center;
   text-align: center;
 }
+
+.breedImage {
+  margin-bottom: 20px;
+  width: 400px;
+  height: 300px;
+}
+
+.catCard {
+  width: 30rem;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: #254d67;
+  color: rgba(235, 238, 243, 0.89);
+  font-family: "Lexend Tera", sans-serif;
+}
