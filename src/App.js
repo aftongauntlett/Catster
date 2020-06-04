@@ -4,23 +4,11 @@ import React from "react";
 import Home from "./components/Views/Home";
 import Discover from "./components/Views/Discover";
 import Search from "./components/Views/Search";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Navbar />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter basename="/">
       <Navbar />
       <div>
         <Switch>
@@ -35,6 +23,6 @@ export default function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }

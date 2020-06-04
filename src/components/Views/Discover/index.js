@@ -6,61 +6,67 @@ import Button from "react-bootstrap/Button";
 
 export default class CatList extends Component {
   state = {
+    imageURL: "",
     search: "",
     users: [],
+    score: 0,
   };
 
-  // component did mount function, which will go get a list of cats.
-  //  store that list of cats in the components state
-  //  then getrandomcat needs to select one of those cats at random
-  // build card using that cat
+  componentDidMount() {
+    this.getNewImage();
+  }
+
+  getNewImage() {
+    axios("https://api.thecatapi.com/v1/images/search?limit=1").then((resp) => {
+      console.log(resp.data[0].url);
+      this.setState({
+        imageURL: resp.data[0].url,
+      });
+    });
+  }
+
+  love = () => {
+    this.getNewImage();
+    const randomNum = Math.floor(Math.random() * 10);
+    console.log(randomNum);
+    if (randomNum <= 3) {
+      this.setState({
+        score: this.state.score + 1,
+      });
+    }
+  };
+
+  pass = () => {
+    this.getNewImage();
+  };
 
   getRandomCat() {
     return (
       <Card className="catCard">
-        <Card.Img
-          variant="top"
-          src="https://api.thecatapi.com/v1/images/search?api_key=56c151e1-0419-430a-85f1-85b5a51c2175"
-        />
+        <Card.Title>Admire the cat</Card.Title>
+        <Card.Img variant="top" src={this.state.imageURL} />
         <Card.Body>
-          <Card.Title>Admire the cat</Card.Title>
           <Card.Text>Do you love this cat?</Card.Text>
-          <Button className="catButtonLeft" variant="success">
-            Love
-          </Button>
-          <Button className="catButtonRight" variant="danger">
-            Pass
-          </Button>
 
-          {/* This needs to keep track of likes */}
-          <Card.Text>0 Cats tolerate you so far.</Card.Text>
+          <Button
+            onClick={this.love}
+            className="catButtonLeft"
+            variant="success"
+          >
+            Yes!
+          </Button>
+          <Button
+            onClick={this.pass}
+            className="catButtonRight"
+            variant="danger"
+          >
+            Nope.
+          </Button>
+          <Card.Text> {this.state.score} Cats tolerate you so far.</Card.Text>
         </Card.Body>
       </Card>
     );
   }
-
-  componentDidMount() {
-    axios(
-      "https://api.thecatapi.com/v1/images/search?api_key=56c151e1-0419-430a-85f1-85b5a51c2175"
-    ).then((resp) => {
-      this.setState({ users: resp.data.results });
-      console.log(resp);
-    });
-  }
-
-  // }
-  // getCatsofBreed(breed) {
-  //   return axios.get(
-  //     "https://api.thecatapi.com/v1/breeds" +
-  //       breed +
-  //       "/images?api_key=56c151e1-0419-430a-85f1-85b5a51c2175"
-  //   );
-  // }
-  // getCategory() {
-  //   return axios.get(
-  //     "https://api.thecatapi.com/v1/categories?api_key=56c151e1-0419-430a-85f1-85b5a51c2175"
-  //   );
-  // }
 
   render() {
     return (

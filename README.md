@@ -1,3 +1,59 @@
+# Catster
+
+![GitHub last commit](https://img.shields.io/github/last-commit/aftongauntlett/Catster)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub followers](https://img.shields.io/github/followers/aftongauntlett?style=social)
+
+**Github:** https://github.com/aftongauntlett/Catster
+
+**Deployed:** http://catster.aftongauntlett.com/
+
+## Description
+
+Catster web-app that allows the user to look at cat pictures and choose if they love or hate them. There is a chance the cat will love you back! The app will keep track of how many cat friends you make. You can also search for images based on breeds. Application's UI is separated into components that are able to manage component state and respond to events.
+
+## Tech Stack
+
+- React
+- React Bootstrap
+- Node
+- HTML
+- CSS
+- JavaScript
+- API
+
+## Screenshot
+
+![Main](https://i.imgur.com/z96xiC6.png)
+![Discover](https://i.imgur.com/c3jxH9W.png)
+![Search](https://i.imgur.com/w044AXS.png)
+
+## License
+
+MIT License
+
+Copyright(c) [2020][afton gauntlett]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files(the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/ or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
